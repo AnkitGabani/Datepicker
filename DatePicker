@@ -3,6 +3,8 @@
  
  @IBAction func clickedFrom(_ sender: UITextField) {
         datePicker.datePickerMode = .time
+         datePicker.preferredDatePickerStyle = .wheels
+
         
         //ToolBar
         let toolbar = UIToolbar();
