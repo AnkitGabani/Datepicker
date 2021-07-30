@@ -28,3 +28,18 @@
     @objc func cancelDatePicker() {
         self.view.endEditing(true)
     }
+
+
+let bidAccepted = dicItemShowData?.itemOrder.createdAt ?? ""
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        
+        let date1 = formatter.date(from: bidAccepted)
+        
+        let Dform = DateFormatter()
+        Dform.dateFormat = "dd MMM yyyy h:mm a"
+        let strDate = Dform.string(from: date1!)
+        lblBidAccepted.text = strDate
